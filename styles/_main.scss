@@ -1,0 +1,94 @@
+@import "./mixins";
+@import "./variables";
+
+.main-slide {
+    background-color: $firstPrimaryColor;
+    //opacity: ;
+    height: 800px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+////////////////////////////////
+
+.about-company {
+    @include scrollAnimationFromLeft;
+    background: url("../images/premium_photo-1667811951673-3b3e8d6742c7.avif");
+
+    .about-comp {
+        background-color: $firstPrimaryColor;
+        opacity: 0.94;
+        ////////////////////////////////
+        @include textCase($primayFontColor, null);
+        padding: $paddingMainHeight $paddingMainWidth;
+
+        
+        .about-comp-des {
+            h5 {
+                font-size: $h5FontSize;
+            }
+            p {
+                font-size: 3.2em;
+                font-weight: bold;
+                text-transform: none;
+                font-stretch: expanded;
+            }
+        }
+
+        .about-comp-stat {
+            @include flexCenter(0px, 0px);
+            margin-top: 100px;
+
+            h4 {
+                font-size: 4.3em;
+            }
+            p {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
+
+.industry {
+    .industry-service {
+        padding: $paddingMainHeight $paddingMainWidth;
+        .ind-header {
+            color: $firstPrimaryColor;
+            h5 {
+                @include textCase($firstPrimaryColor, $h5FontSize);
+            }
+            .ind-header-title {
+                @include flexCenter(null,  null);
+                h3 {
+                    @include sectionTitle($firstPrimaryColor, $sectionTitleSize);
+                }
+                .button {
+                    @include defaultButton;
+                }
+            }
+        }
+        .ind-services {
+            @include flexCenter(50px, 0px);
+            article .art-button {
+                @include aritcleButton;
+            }
+            article:nth-of-type(1) {
+                @include articleService('https://plus.unsplash.com/premium_photo-1661909058836-f81511ec8825?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            }
+            article:nth-of-type(2) {
+                @include articleService('https://images.unsplash.com/photo-1678532685208-54acdd41187d?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+            }
+            article:nth-of-type(3) {
+                @include articleService('https://images.unsplash.com/photo-1548945359-6a13700d1135?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            }
+            article:nth-of-type(4) {
+                @include articleService('https://images.unsplash.com/photo-1564182842834-681b7be6de4b?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            }
+        }
+    }
+
+    .industry-info {
+        padding: null $paddingMainWidth;
+    }
+}

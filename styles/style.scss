@@ -1,0 +1,16 @@
+@import "./header";
+@import "./variables";
+@import "./mixins";
+@import "./main";
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+a {
+    text-decoration: none;
+    @include flexCenter(0px, 0px);
+    color: $primayFontColor;
+}
+
+

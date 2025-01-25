@@ -1,0 +1,174 @@
+@import "./variables";
+
+////////////////////////////////
+// Still working on the transition style for the navigation bar
+////////////////////////////////
+@mixin transitionLink {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $secondPrimaryColor; // Color that will transition in
+        z-index: -1; // Place the pseudo-element behind the text
+        transition: all .8s ease;
+        //transform: scaleX(0); // Start with no scaling
+        //transform-origin: bottom right; // Set the transformation origin
+    }
+
+    &:hover {
+        color: $secondPrimaryColor; // Change the text color on hover
+    }
+    // On hover, we scale the pseudo-element from left to right
+    &:hover::before {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+////////////////////////////////////////////////////////////////
+/// scrolling animation from left to right
+////////////////////////////////////////////////////////////////
+@mixin scrollAnimationFromLeft {
+    .hidden-element {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 1s ease;
+    }
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+@mixin defaultButton {
+    color: $firstPrimaryColor;
+    background-color: $secondPrimaryColor;
+    border: 1px solid $secondPrimaryColor;
+    cursor: pointer;
+    padding: 0.6rem 1.6rem;
+    position: relative;
+    font-weight: bolder;
+
+    // Pseudo-element styles
+    &::after {
+        content: ''; // Add an empty pseudo-element
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; //Match the width of the button
+        height: 100%; // Match the height of the button
+        background-color: transparent; // stranparent
+        transition: all $transition ease; // Add a smooth transition for the hover effect
+        z-index: 1; //Ensure it appears above the button but below the text
+        border: 1px solid $secondPrimaryColor; 
+    }
+
+    &::after {
+        top: $offset;
+        left: $offset;
+    }
+
+    // Hover effect
+    &:hover::after {
+        top: -$offset; // Shift the top position upward when hovered
+        left: -$offset; // Shift the left position leftward when hovered
+        bottom: 0;
+        right: 0;
+    }
+}
+
+@mixin flexCenter($height, $width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $height $width;
+}
+
+@mixin nakedButton {
+    all: unset;
+}
+
+@mixin iconFormat {
+    font-size: 24px;
+    color: $primayFontColor;
+}
+
+@mixin hoverColor {
+    color: $primayFontColor;
+    background-color: $firstPrimaryColor;
+
+    &:hover {
+        color: $firstPrimaryColor;
+        background-color: $secondPrimaryColor;
+    }
+}
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+@mixin textCase($color, $size) {
+    text-transform: uppercase;
+    color: $color;
+    font-size: $size;
+}
+
+@mixin sectionTitle($color, $size) {
+    color: $color; ;
+    font-size: $size;
+    font-weight: bolder;
+}
+
+@mixin articleService($image) {
+    background-image: url($image);
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-position: center;
+    width: 350px;
+    height: 400px;
+    padding: 10px;
+}
+
+@mixin aritcleButton {
+    color: $firstPrimaryColor;
+    background-color: $secondPrimaryColor;
+    border: 1px solid $secondPrimaryColor;
+    cursor: pointer;
+    padding: $paddingBoxHeight - 5px $paddingBoxWidth+15px;
+    position: relative;
+    font-weight: bolder;
+    font-size: 1.5em;
+    width: 95%;
+    text-align: left;
+
+    &::after {
+        content: '---->'; // Add an empty pseudo-element
+        position: absolute;
+        background-color: transparent; // stranparent
+        z-index: 1; //Ensure it appears above the button but below the text
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 0.5s ease;
+        margin-left: 10px;
+        font-weight: lighter;
+    }
+
+    &:hover::after {
+        //top: $offset; // Shift the top position upward when hovered
+        //left: $offset; // Shift the left position leftward when hovered
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}

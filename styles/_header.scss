@@ -1,0 +1,101 @@
+@import "./variables";
+@import "./mixins";
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+.header-social {
+    @include flexCenter(0px, $paddingBoxHeight);
+    background-color: $secondPrimaryColor;
+    //padding: 0px $paddingBoxHeight;
+
+    .header-social-media .nav {
+        @include flexCenter(0px, 0px);
+        gap: 20px;
+
+        .nav-link {
+            @include hoverColor;
+            @include flexCenter(7px, 7px);
+            justify-content: center;
+            background-color: $firstPrimaryColor;
+            //padding: 7px;
+            border-radius: 100%;
+            border: 1px solid $firstPrimaryColor;
+            
+            i {
+                font-size: $navFontSize;
+            }
+        }
+    }
+
+    .header-social-info {
+        a {
+            color: $firstPrimaryColor;
+        }
+    }
+}
+
+.header {
+    @include flexCenter($paddingBoxHeight, $paddingBoxWidth);
+    background-color: $firstPrimaryColor;
+    //padding: $paddingBoxHeight $paddingBoxWidth;
+    color: $primayFontColor;
+
+    // Navigation bar
+    .mian-nav {
+        .nav .nav-item .nav-link{
+            @include transitionLink;
+            color: $primayFontColor;
+            font-weight: bolder;
+            font-size: $navFontSize;
+
+            span {
+                font-weight: lighter;
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .logo {
+        img {
+            height: 50px;
+            cursor: pointer;
+        }
+
+        h1 {
+            color: white;
+            font-size: 24px;
+        }
+    }
+
+    .header-search-menu {
+        @include flexCenter(0px, 0px);
+        gap: 40px;
+
+        .search-icon button {
+            @include nakedButton;
+
+            i {
+                @include iconFormat;
+                cursor: pointer;
+
+                &:hover {
+                    color: $secondPrimaryColor;
+                }
+            }
+        }
+
+        .header-button .button {
+            @include defaultButton;
+        }
+
+        .menu button {
+            @include nakedButton;
+            margin-right: 20px;
+
+            i {
+                @include iconFormat;
+            }
+        }
+    }
+}
