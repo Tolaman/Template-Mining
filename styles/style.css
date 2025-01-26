@@ -248,6 +248,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 50px 0px;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  align-items: flex-start;
 }
 .industry .industry-service .ind-services article .art-button {
   color: rgb(22, 58, 72);
@@ -258,8 +262,10 @@
   position: relative;
   font-weight: bolder;
   font-size: 1.5em;
-  width: 95%;
   text-align: left;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
 }
 .industry .industry-service .ind-services article .art-button::after {
   content: "---->";
@@ -282,45 +288,45 @@
   background-image: url("https://plus.unsplash.com/premium_photo-1661909058836-f81511ec8825?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   display: flex;
-  justify-content: space-around;
   align-items: flex-end;
   background-position: center;
-  width: 350px;
-  height: 400px;
   padding: 10px;
+  flex-grow: 1;
+  min-height: 450px;
+  flex-basis: 300px;
 }
 .industry .industry-service .ind-services article:nth-of-type(2) {
   background-image: url("https://images.unsplash.com/photo-1678532685208-54acdd41187d?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   display: flex;
-  justify-content: space-around;
   align-items: flex-end;
   background-position: center;
-  width: 350px;
-  height: 400px;
   padding: 10px;
+  flex-grow: 1;
+  min-height: 450px;
+  flex-basis: 300px;
 }
 .industry .industry-service .ind-services article:nth-of-type(3) {
   background-image: url("https://images.unsplash.com/photo-1548945359-6a13700d1135?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   display: flex;
-  justify-content: space-around;
   align-items: flex-end;
   background-position: center;
-  width: 350px;
-  height: 400px;
   padding: 10px;
+  flex-grow: 1;
+  min-height: 450px;
+  flex-basis: 300px;
 }
 .industry .industry-service .ind-services article:nth-of-type(4) {
   background-image: url("https://images.unsplash.com/photo-1564182842834-681b7be6de4b?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   display: flex;
-  justify-content: space-around;
   align-items: flex-end;
   background-position: center;
-  width: 350px;
-  height: 400px;
   padding: 10px;
+  flex-grow: 1;
+  min-height: 450px;
+  flex-basis: 300px;
 }
 .industry .industry-info {
   padding: 20px;

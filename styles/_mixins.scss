@@ -131,12 +131,12 @@
     background-image: url($image);
     background-size: cover;
     display: flex;
-    justify-content: space-around;
     align-items: flex-end;
     background-position: center;
-    width: 350px;
-    height: 400px;
     padding: 10px;
+    flex-grow: 1;
+    min-height: 450px;
+    flex-basis: 300px;
 }
 
 @mixin aritcleButton {
@@ -148,8 +148,11 @@
     position: relative;
     font-weight: bolder;
     font-size: 1.5em;
-    width: 95%;
     text-align: left;
+    // width: 97%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
 
     &::after {
         content: '---->'; // Add an empty pseudo-element

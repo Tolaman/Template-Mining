@@ -70,6 +70,10 @@
         }
         .ind-services {
             @include flexCenter(50px, 0px);
+            align-content: flex-start;
+            flex-wrap: wrap;
+            gap: 20px 20px;
+            align-items: flex-start;
             article .art-button {
                 @include aritcleButton;
             }
