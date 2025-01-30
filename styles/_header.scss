@@ -38,7 +38,7 @@
 .header {
     @include flexCenter($paddingBoxHeight, $paddingBoxWidth);
     background-color: $firstPrimaryColor;
-    //padding: $paddingBoxHeight $paddingBoxWidth;
+    flex-wrap: wrap;
     color: $primayFontColor;
 
     // Navigation bar

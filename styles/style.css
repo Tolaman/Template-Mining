@@ -41,6 +41,7 @@
   justify-content: space-between;
   padding: 25px 10px;
   background-color: rgb(22, 58, 72);
+  flex-wrap: wrap;
   color: white;
 }
 .header .mian-nav .nav .nav-item .nav-link {
@@ -107,6 +108,8 @@
   padding: 0.6rem 1.6rem;
   position: relative;
   font-weight: bolder;
+  flex-shrink: unset;
+  flex-basis: auto;
 }
 .header .header-search-menu .header-button .button::after {
   content: "";
@@ -206,6 +209,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .industry .industry-service .ind-header .ind-header-title h3 {
   color: rgb(22, 58, 72);
@@ -220,6 +224,8 @@
   padding: 0.6rem 1.6rem;
   position: relative;
   font-weight: bolder;
+  flex-shrink: unset;
+  flex-basis: auto;
 }
 .industry .industry-service .ind-header .ind-header-title .button::after {
   content: "";
@@ -265,7 +271,6 @@
   text-align: left;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: auto;
 }
 .industry .industry-service .ind-services article .art-button::after {
   content: "---->";
@@ -330,6 +335,111 @@
 }
 .industry .industry-info {
   padding: 20px;
+}
+.industry .industry-info .ind-info-base {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  align-content: flex-start;
+  margin-top: -60px;
+  align-items: flex-start;
+  /*.ind-info-video {
+      //flex-basis: 50%;
+      //flex-grow: 1;
+      //width: 100%;
+      //height: 100%;*/
+  /*
+  #mute-unmute-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: blur(10px);
+      cursor: pointer;
+      color: $primayFontColor;
+      width: 40px;
+      height: 40px;
+      border: 1px solid $primayFontColor;
+      //position: absolute;
+      z-index: 2;
+  }*/
+}
+.industry .industry-info .ind-info-base video {
+  min-width: 40%;
+  flex-shrink: 1;
+}
+.industry .industry-info .ind-info-base .ind-info-header {
+  flex-basis: 400px;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.industry .industry-info .ind-info-base .ind-info-header h5 {
+  text-transform: uppercase;
+  color: rgb(22, 58, 72);
+  font-size: 1em;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-head-title h3 {
+  color: rgb(22, 58, 72);
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-head-title p {
+  text-transform: uppercase;
+  color: rgb(22, 58, 72);
+  font-size: 1em;
+  text-transform: none;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  justify-content: flex-start;
+  gap: 40px;
+  margin-left: 20px;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more button {
+  color: rgb(22, 58, 72);
+  background-color: rgb(237, 187, 23);
+  border: 1px solid rgb(237, 187, 23);
+  cursor: pointer;
+  padding: 0.6rem 1.6rem;
+  position: relative;
+  font-weight: bolder;
+  flex-shrink: unset;
+  flex-basis: auto;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  z-index: 1;
+  border: 1px solid rgb(237, 187, 23);
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more button::after {
+  top: 0.4rem;
+  left: 0.4rem;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more button:hover::after {
+  top: -0.4rem;
+  left: -0.4rem;
+  bottom: 0;
+  right: 0;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more .ind-info-more-call {
+  color: rgb(22, 58, 72);
 }
 
 * {

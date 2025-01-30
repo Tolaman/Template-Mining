@@ -60,6 +60,7 @@
             }
             .ind-header-title {
                 @include flexCenter(null,  null);
+                flex-wrap: wrap;
                 h3 {
                     @include sectionTitle($firstPrimaryColor, $sectionTitleSize);
                 }
@@ -72,7 +73,7 @@
             @include flexCenter(50px, 0px);
             align-content: flex-start;
             flex-wrap: wrap;
-            gap: 20px 20px;
+            gap: $flexGap $flexGap;
             align-items: flex-start;
             article .art-button {
                 @include aritcleButton;
@@ -94,5 +95,79 @@
 
     .industry-info {
         padding: null $paddingMainWidth;
+
+        .ind-info-base {
+            @include flexCenter(null, null);
+            flex-wrap: wrap;
+            gap: $flexGap $flexGap;
+            //width: 100%;
+            align-content: flex-start;
+            margin-top: -60px;
+            //gap: $flexGap $flexGap;
+            align-items: flex-start;
+            //flex-wrap: wrap;
+            /*.ind-info-video {
+                //flex-basis: 50%;
+                //flex-grow: 1;
+                //width: 100%;
+                //height: 100%;*/
+
+                video {
+                    //flex-basis: 300px;
+                    //flex-grow: 1;
+                    //max-width: 100%;
+                    min-width: 40%;
+                    //filter: blur(1);
+                    flex-shrink: 1;
+                }
+                /*
+                #mute-unmute-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    filter: blur(10px);
+                    cursor: pointer;
+                    color: $primayFontColor;
+                    width: 40px;
+                    height: 40px;
+                    border: 1px solid $primayFontColor;
+                    //position: absolute;
+                    z-index: 2;
+                }*/
+            .ind-info-header {
+                flex-basis: 400px;
+                flex-grow: 1;
+                //flex-shrink: 1;
+                //max-width: 100%;
+                max-width: 100%;
+                h5 {
+                    @include textCase($firstPrimaryColor, $h5FontSize);
+                }
+                .ind-info-head-title {
+                    h3 {
+                        @include sectionTitle($firstPrimaryColor, $sectionTitleSize);
+                    }
+                    p {
+                        @include textCase($firstPrimaryColor, $h5FontSize);
+                        text-transform: none; 
+                    }
+                }
+                .ind-info-list {
+                    @include flexCenter(20px, null);
+                    justify-content: flex-start;
+                    gap: 40px;
+                    margin-left: 20px;
+                }
+                .ind-info-more {
+                    @include flexCenter(20px, null);
+                    button {
+                        @include defaultButton;
+                    }
+                    .ind-info-more-call {
+                        color: $firstPrimaryColor;
+                    }
+                }
+            }
+        }
     }
 }
