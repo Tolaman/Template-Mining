@@ -1,7 +1,7 @@
-@import "./header";
-@import "./variables";
-@import "./mixins";
-@import "./main";
+@use "./header";
+@use "./variables" as v;
+@use "./mixins" as *;
+@use "./main";
 
 * {
     padding: 0px;
@@ -10,7 +10,7 @@
 a {
     text-decoration: none;
     @include flexCenter(0px, 0px);
-    color: $primayFontColor;
+    color: v.$primayFontColor;
 }
 
 

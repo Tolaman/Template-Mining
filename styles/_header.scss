@@ -1,13 +1,13 @@
-@import "./variables";
-@import "./mixins";
+@use "./variables" as v;
+@use "./mixins" as *;
 
 ////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////
 
 .header-social {
-    @include flexCenter(0px, $paddingBoxHeight);
-    background-color: $secondPrimaryColor;
-    //padding: 0px $paddingBoxHeight;
+    @include flexCenter(0px, v.$paddingBoxHeight);
+    background-color: v.$secondPrimaryColor;
+    //padding: 0px v.$paddingBoxHeight;
 
     .header-social-media .nav {
         @include flexCenter(0px, 0px);
@@ -17,37 +17,37 @@
             @include hoverColor;
             @include flexCenter(7px, 7px);
             justify-content: center;
-            background-color: $firstPrimaryColor;
+            background-color: v.$firstPrimaryColor;
             //padding: 7px;
             border-radius: 100%;
-            border: 1px solid $firstPrimaryColor;
+            border: 1px solid v.$firstPrimaryColor;
             
             i {
-                font-size: $navFontSize;
+                font-size: v.$navFontSize;
             }
         }
     }
 
     .header-social-info {
         a {
-            color: $firstPrimaryColor;
+            color: v.$firstPrimaryColor;
         }
     }
 }
 
 .header {
-    @include flexCenter($paddingBoxHeight, $paddingBoxWidth);
-    background-color: $firstPrimaryColor;
+    @include flexCenter(v.$paddingBoxHeight, v.$paddingBoxWidth);
+    background-color: v.$firstPrimaryColor;
     flex-wrap: wrap;
-    color: $primayFontColor;
+    color: v.$primayFontColor;
 
     // Navigation bar
     .mian-nav {
         .nav .nav-item .nav-link{
             @include transitionLink;
-            color: $primayFontColor;
+            color: v.$primayFontColor;
             font-weight: bolder;
-            font-size: $navFontSize;
+            font-size: v.$navFontSize;
 
             span {
                 font-weight: lighter;
@@ -80,7 +80,7 @@
                 cursor: pointer;
 
                 &:hover {
-                    color: $secondPrimaryColor;
+                    color: v.$secondPrimaryColor;
                 }
             }
         }

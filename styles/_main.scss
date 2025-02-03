@@ -1,13 +1,44 @@
-@import "./mixins";
-@import "./variables";
+@use "./mixins" as *;
+@use "./variables" as v;
 
 .main-slide {
-    background-color: $firstPrimaryColor;
-    //opacity: ;
-    height: 800px;
-    width: 100%;
-    overflow: hidden;
+    height: 90vh;
     position: relative;
+    
+    .list {
+        .item {
+            position: absolute;
+            inset: 0 0 0 0;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: #023b4a;
+                opacity: 60%;
+            }
+
+            .content {
+                position: absolute;
+                @include flexCenter(20px, 20px);
+                gap: 40px;
+                top: 20%;
+                width: 100%;
+                z-index: 1;
+                color: v.$primayFontColor
+            }
+        }
+    }
 }
 
 ////////////////////////////////
@@ -17,16 +48,16 @@
     background: url("../images/premium_photo-1667811951673-3b3e8d6742c7.avif");
 
     .about-comp {
-        background-color: $firstPrimaryColor;
+        background-color: v.$firstPrimaryColor;
         opacity: 0.94;
         ////////////////////////////////
-        @include textCase($primayFontColor, null);
-        padding: $paddingMainHeight $paddingMainWidth;
+        @include textCase(v.$primayFontColor, null);
+        padding: v.$paddingMainHeight v.$paddingMainWidth;
 
         
         .about-comp-des {
             h5 {
-                font-size: $h5FontSize;
+                font-size: v.$h5FontSize;
             }
             p {
                 font-size: 3.2em;
@@ -52,17 +83,17 @@
 
 .industry {
     .industry-service {
-        padding: $paddingMainHeight $paddingMainWidth;
+        padding: v.$paddingMainHeight v.$paddingMainWidth;
         .ind-header {
-            color: $firstPrimaryColor;
+            color: v.$firstPrimaryColor;
             h5 {
-                @include textCase($firstPrimaryColor, $h5FontSize);
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
             }
             .ind-header-title {
                 @include flexCenter(null,  null);
                 flex-wrap: wrap;
                 h3 {
-                    @include sectionTitle($firstPrimaryColor, $sectionTitleSize);
+                    @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
                 }
                 .button {
                     @include defaultButton;
@@ -73,7 +104,7 @@
             @include flexCenter(50px, 0px);
             align-content: flex-start;
             flex-wrap: wrap;
-            gap: $flexGap $flexGap;
+            gap: v.$flexGap v.$flexGap;
             align-items: flex-start;
             article .art-button {
                 @include aritcleButton;
@@ -94,61 +125,53 @@
     }
 
     .industry-info {
-        padding: null $paddingMainWidth;
+        padding: null v.$paddingMainWidth;
 
         .ind-info-base {
             @include flexCenter(null, null);
-            flex-wrap: wrap;
-            gap: $flexGap $flexGap;
-            //width: 100%;
-            align-content: flex-start;
+            flex-wrap: wrap ;
+            align-items: flex-start ; 
+            gap: v.$flexGap v.$flexGap;
             margin-top: -60px;
-            //gap: $flexGap $flexGap;
-            align-items: flex-start;
-            //flex-wrap: wrap;
-            /*.ind-info-video {
-                //flex-basis: 50%;
-                //flex-grow: 1;
-                //width: 100%;
-                //height: 100%;*/
-
+            .ind-info-video {
+                flex: 0 1 45% ;
+                min-width: 300px ;
+                max-width: 500px ;
                 video {
-                    //flex-basis: 300px;
-                    //flex-grow: 1;
-                    //max-width: 100%;
-                    min-width: 40%;
-                    //filter: blur(1);
-                    flex-shrink: 1;
+                    height: auto ;
+                    width: 10% ;
+                    max-height: 400px ;
+                    object-fit: cover ;
                 }
-                /*
+
                 #mute-unmute-button {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     filter: blur(10px);
                     cursor: pointer;
-                    color: $primayFontColor;
+                    color: v.$primayFontColor;
                     width: 40px;
                     height: 40px;
-                    border: 1px solid $primayFontColor;
+                    border: 1px solid v.$primayFontColor;
                     //position: absolute;
                     z-index: 2;
-                }*/
+                }
+            }
+
             .ind-info-header {
-                flex-basis: 400px;
-                flex-grow: 1;
-                //flex-shrink: 1;
-                //max-width: 100%;
-                max-width: 100%;
+                //flex: 1;
+                min-width: 300px;
+                max-width: 50%;
                 h5 {
-                    @include textCase($firstPrimaryColor, $h5FontSize);
+                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
                 }
                 .ind-info-head-title {
                     h3 {
-                        @include sectionTitle($firstPrimaryColor, $sectionTitleSize);
+                        @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
                     }
                     p {
-                        @include textCase($firstPrimaryColor, $h5FontSize);
+                        @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
                         text-transform: none; 
                     }
                 }
@@ -164,7 +187,7 @@
                         @include defaultButton;
                     }
                     .ind-info-more-call {
-                        color: $firstPrimaryColor;
+                        color: v.$firstPrimaryColor;
                     }
                 }
             }
