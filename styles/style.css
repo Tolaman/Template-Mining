@@ -171,12 +171,69 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 20px;
+  padding: 20px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 40px;
   top: 20%;
-  width: 100%;
+  max-width: 80%;
   z-index: 1;
   color: white;
+}
+.main-slide .list .item .content .content-title .hidden-element {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+.main-slide .list .item .content .content-title .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.main-slide .list .item .content .content-title h5 {
+  font-size: 1em;
+}
+.main-slide .list .item .content .content-title h2 {
+  font-size: 5em;
+}
+.main-slide .list .item .content .content-title button {
+  color: #023b4a;
+  background-color: #f7c600;
+  border: 1px solid #f7c600;
+  cursor: pointer;
+  padding: 0.6rem 1.6rem;
+  position: relative;
+  font-weight: bolder;
+  flex-shrink: unset;
+  flex-basis: auto;
+}
+.main-slide .list .item .content .content-title button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  z-index: 1;
+  border: 1px solid #f7c600;
+}
+.main-slide .list .item .content .content-title button::after {
+  top: 0.4rem;
+  left: 0.4rem;
+}
+.main-slide .list .item .content .content-title button:hover::after {
+  top: -0.4rem;
+  left: -0.4rem;
+  bottom: 0;
+  right: 0;
+}
+.main-slide .list .item .content p {
+  flex-basis: 300px;
+  flex-grow: 1;
+  width: 40%;
 }
 
 .about-company {
@@ -327,7 +384,7 @@
   padding: 10px;
   flex-grow: 1;
   min-height: 450px;
-  flex-basis: 300px;
+  flex-basis: 350px;
 }
 .industry .industry-service .ind-services article:nth-of-type(2) {
   background-image: url("https://images.unsplash.com/photo-1678532685208-54acdd41187d?q=80&w=3271&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -338,7 +395,7 @@
   padding: 10px;
   flex-grow: 1;
   min-height: 450px;
-  flex-basis: 300px;
+  flex-basis: 350px;
 }
 .industry .industry-service .ind-services article:nth-of-type(3) {
   background-image: url("https://images.unsplash.com/photo-1548945359-6a13700d1135?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -349,7 +406,7 @@
   padding: 10px;
   flex-grow: 1;
   min-height: 450px;
-  flex-basis: 300px;
+  flex-basis: 350px;
 }
 .industry .industry-service .ind-services article:nth-of-type(4) {
   background-image: url("https://images.unsplash.com/photo-1564182842834-681b7be6de4b?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
@@ -360,7 +417,7 @@
   padding: 10px;
   flex-grow: 1;
   min-height: 450px;
-  flex-basis: 300px;
+  flex-basis: 350px;
 }
 .industry .industry-info {
   padding: 20px;
@@ -370,19 +427,32 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 20px 20px;
   margin-top: -60px;
 }
 .industry .industry-info .ind-info-base .ind-info-video {
-  flex: 0 1 45%;
-  min-width: 300px;
-  max-width: 500px;
+  flex-basis: 500px;
+  flex-grow: 1;
+  display: flex;
+  /*
+  &::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(
+          to top, v.$firstPrimaryColor 40%, transparent
+      );
+      opacity: 0.5;
+      z-index: 2;
+  }*/
 }
 .industry .industry-info .ind-info-base .ind-info-video video {
-  height: auto;
-  width: 10%;
-  max-height: 400px;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .industry .industry-info .ind-info-base .ind-info-video #mute-unmute-button {
@@ -395,11 +465,12 @@
   width: 40px;
   height: 40px;
   border: 1px solid white;
-  z-index: 2;
+  z-index: 1;
 }
 .industry .industry-info .ind-info-base .ind-info-header {
-  min-width: 300px;
-  max-width: 50%;
+  padding: 55px 0 40px 0;
+  flex-basis: 500px;
+  flex-grow: 1;
 }
 .industry .industry-info .ind-info-base .ind-info-header h5 {
   text-transform: uppercase;
@@ -424,7 +495,6 @@
   padding: 20px;
   justify-content: flex-start;
   gap: 40px;
-  margin-left: 20px;
 }
 .industry .industry-info .ind-info-base .ind-info-header .ind-info-more {
   display: flex;

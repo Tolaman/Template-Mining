@@ -6,6 +6,7 @@
     position: relative;
     
     .list {
+
         .item {
             position: absolute;
             inset: 0 0 0 0;
@@ -24,18 +25,41 @@
                 position: absolute;
                 left: 0;
                 bottom: 0;
-                background-color: #023b4a;
+                background-color: v.$firstPrimaryColor;
                 opacity: 60%;
             }
 
             .content {
                 position: absolute;
-                @include flexCenter(20px, 20px);
+                @include flexCenter(v.$paddingMainWidth, null);
+                justify-content: flex-start;
+                flex-wrap: wrap;
                 gap: 40px;
                 top: 20%;
-                width: 100%;
+                max-width: 80%;
                 z-index: 1;
-                color: v.$primayFontColor
+                color: v.$primayFontColor;
+
+                .content-title {
+                    @include scrollAnimationFromLeft;
+
+                    h5 {
+                        font-size: v.$h5FontSize;
+                        //color: v.$primayFontColor;
+                    }
+                    h2 {
+                        font-size: 5em;
+                    }
+                    button {
+                        @include defaultButton;
+                    }
+                }
+                
+                p {
+                    flex-basis: 300px;
+                    flex-grow: 1;
+                    width: 40%;
+                }
             }
         }
     }
@@ -130,19 +154,33 @@
         .ind-info-base {
             @include flexCenter(null, null);
             flex-wrap: wrap ;
-            align-items: flex-start ; 
+            align-items: stretch;
             gap: v.$flexGap v.$flexGap;
             margin-top: -60px;
             .ind-info-video {
-                flex: 0 1 45% ;
-                min-width: 300px ;
-                max-width: 500px ;
+                flex-basis: 500px;
+                flex-grow: 1;
+                display: flex;
                 video {
-                    height: auto ;
-                    width: 10% ;
-                    max-height: 400px ;
-                    object-fit: cover ;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
                 }
+
+                /*
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    background-image: linear-gradient(
+                        to top, v.$firstPrimaryColor 40%, transparent
+                    );
+                    opacity: 0.5;
+                    z-index: 2;
+                }*/
 
                 #mute-unmute-button {
                     display: flex;
@@ -155,14 +193,14 @@
                     height: 40px;
                     border: 1px solid v.$primayFontColor;
                     //position: absolute;
-                    z-index: 2;
+                    z-index: 1;
                 }
             }
 
             .ind-info-header {
-                //flex: 1;
-                min-width: 300px;
-                max-width: 50%;
+                padding: v.$paddingBoxHeight + 30 0 v.$paddingBoxWidth + 30 0;
+                flex-basis: 500px;
+                flex-grow: 1;
                 h5 {
                     @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
                 }
@@ -179,7 +217,6 @@
                     @include flexCenter(20px, null);
                     justify-content: flex-start;
                     gap: 40px;
-                    margin-left: 20px;
                 }
                 .ind-info-more {
                     @include flexCenter(20px, null);
