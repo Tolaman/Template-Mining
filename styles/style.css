@@ -151,6 +151,17 @@
   inset: 0 0 0 0;
   overflow: hidden;
 }
+.main-slide .list .item .hidden-element {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+.main-slide .list .item .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
 .main-slide .list .item img {
   width: 100%;
   height: 100%;
@@ -179,17 +190,6 @@
   max-width: 80%;
   z-index: 1;
   color: white;
-}
-.main-slide .list .item .content .content-title .hidden-element {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s ease;
-}
-.main-slide .list .item .content .content-title .show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
 }
 .main-slide .list .item .content .content-title h5 {
   font-size: 1em;
@@ -234,6 +234,44 @@
   flex-basis: 300px;
   flex-grow: 1;
   width: 40%;
+}
+.main-slide .list .arrows {
+  position: absolute;
+  top: 30%;
+  right: 50%;
+  z-index: 100;
+}
+.main-slide .list .arrows button {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  background: none;
+  color: white;
+}
+.main-slide .list .arrows button:hover {
+  background-color: #f7c600;
+  border: 1px solid #f7c600;
+  transition: all 0.7s ease;
+}
+.main-slide .list .thumnail {
+  position: absolute;
+  bottom: 50%;
+  z-index: 11;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 130px;
+  padding: 0 50px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+.main-slide .list .thumnail .item {
+  width: 250px;
+  border: 2px solid #f7c600;
+}
+.main-slide .list .thumnail .item::after {
+  opacity: 0;
 }
 
 .about-company {

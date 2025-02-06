@@ -8,6 +8,7 @@
     .list {
 
         .item {
+            @include scrollAnimationFromLeft;
             position: absolute;
             inset: 0 0 0 0;
             overflow: hidden;
@@ -41,7 +42,7 @@
                 color: v.$primayFontColor;
 
                 .content-title {
-                    @include scrollAnimationFromLeft;
+                    
 
                     h5 {
                         font-size: v.$h5FontSize;
@@ -59,6 +60,50 @@
                     flex-basis: 300px;
                     flex-grow: 1;
                     width: 40%;
+                }
+            }
+        }
+
+        .arrows {
+            position: absolute;
+            top: 30%;
+            right: 50%;
+            z-index: 100;
+
+            button {
+                border: 1px solid v.$primayFontColor;
+                border-radius: 100%;
+                width: 60px;
+                height: 60px;
+                background: none;
+                color: v.$primayFontColor;
+
+                &:hover {
+                    background-color: v.$secondPrimaryColor;
+                    border: 1px solid v.$secondPrimaryColor;
+                    transition: all .7s ease;
+                }
+            }
+        }
+
+        .thumnail {
+            position: absolute;
+            bottom: 50%;
+            z-index: 11;
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            height: 130px;
+            padding: 0 50px;
+            box-sizing: border-box;
+            overflow: auto;
+
+            .item {
+                width: 250px;
+                border: 2px solid v.$secondPrimaryColor;
+               
+                &::after {
+                    opacity: 0;
                 }
             }
         }
