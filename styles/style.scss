@@ -2,15 +2,25 @@
 @use "./variables" as v;
 @use "./mixins" as *;
 @use "./main";
+@use "./footer";
 
 * {
     padding: 0px;
     margin: 0px;
 }
+
 a {
     text-decoration: none;
     @include flexCenter(0px, 0px);
     color: v.$primayFontColor;
+}
+.main-slider .list .item.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.main-slider .thumnail .item.active {
+    filter: brightness(1);
 }
 
 

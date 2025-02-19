@@ -1,7 +1,7 @@
 @use "./mixins" as *;
 @use "./variables" as v;
 
-.main-slide {
+.main-slider {
     height: 90vh;
     position: relative;
     
@@ -12,6 +12,7 @@
             position: absolute;
             inset: 0 0 0 0;
             overflow: hidden;
+            opacity: 0;
 
             img {
                 width: 100%;
@@ -37,12 +38,11 @@
                 flex-wrap: wrap;
                 gap: 40px;
                 top: 20%;
-                max-width: 80%;
                 z-index: 1;
                 color: v.$primayFontColor;
 
                 .content-title {
-                    
+                    width: 50%;
 
                     h5 {
                         font-size: v.$h5FontSize;
@@ -53,44 +53,26 @@
                     }
                     button {
                         @include defaultButton;
+                        z-index: 10;
+                        margin-top: 50px;
                     }
                 }
                 
-                p {
+                .paragraph {
                     flex-basis: 300px;
                     flex-grow: 1;
-                    width: 40%;
-                }
-            }
-        }
-
-        .arrows {
-            position: absolute;
-            top: 30%;
-            right: 50%;
-            z-index: 100;
-
-            button {
-                border: 1px solid v.$primayFontColor;
-                border-radius: 100%;
-                width: 60px;
-                height: 60px;
-                background: none;
-                color: v.$primayFontColor;
-
-                &:hover {
-                    background-color: v.$secondPrimaryColor;
-                    border: 1px solid v.$secondPrimaryColor;
-                    transition: all .7s ease;
+                    max-width: 34%;
                 }
             }
         }
 
         .thumnail {
             position: absolute;
-            bottom: 50%;
+            bottom: 80px;
             z-index: 11;
             display: flex;
+            justify-content: flex-end;
+            align-items: center;
             gap: 10px;
             width: 100%;
             height: 130px;
@@ -98,12 +80,38 @@
             box-sizing: border-box;
             overflow: auto;
 
+            .arrows {
+                z-index: 10;
+                button {
+                    border: 1px solid v.$primayFontColor;
+                    border-radius: 100%;
+                    width: 60px;
+                    height: 60px;
+                    background: none;
+                    color: v.$primayFontColor;
+    
+                    &:hover {
+                        background-color: v.$secondPrimaryColor;
+                        border: 1px solid v.$secondPrimaryColor;
+                        transition: all .7s ease;
+                    }
+                }
+            }
+
             .item {
                 width: 250px;
                 border: 2px solid v.$secondPrimaryColor;
+                filter: brightness(.5);
+                transition: .5s;
                
                 &::after {
                     opacity: 0;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
         }
