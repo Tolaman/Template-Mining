@@ -177,3 +177,19 @@
         transform: translateX(0);
     }
 }
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+/// 
+@mixin defaultInput {
+    height: 50px;
+    color: v.$firstPrimaryColor;
+    padding: v.$paddingBoxWidth;
+    border: 1px solid rgba(v.$firstPrimaryColor, .3);
+    outline: none;
+
+    &:focus {
+        border-color: v.$secondPrimaryColor;
+        transition: v.$transition;
+    }
+}

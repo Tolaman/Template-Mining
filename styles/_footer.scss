@@ -13,7 +13,7 @@
         margin: auto;
 
         .footer-newsletter-content {
-            background: rgba(v.$firstPrimaryColor, .94);
+            background: rgba(v.$firstPrimaryColor, v.$backgroundopacity);
             justify-content: center;
             align-items: center;
             display: flex;
@@ -71,7 +71,7 @@ footer {
     height: 75vh;
 
     .footer-container {
-        background: rgba(v.$secondPrimaryColor, .96);
+        background: rgba(v.$secondPrimaryColor, v.$backgroundopacity);
         width: 100%;
         height: 100%;
         padding: 15% v.$paddingMainWidth;

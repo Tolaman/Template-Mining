@@ -1,0 +1,149 @@
+@use "./variables" as v;
+@use "./mixins" as *;
+
+.contact-header {
+    background-image: url("https://plus.unsplash.com/premium_photo-1677707394493-09962b13b675?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+
+    .cont-header-container {
+        background: rgba(v.$secondPrimaryColor, v.$backgroundopacity);
+        @include flexCenter(null, null);
+        justify-content: center;
+        height: 35vh;
+
+        .cont-header-content {
+            h3 {
+                @include sectionTitle(v.$firstPrimaryColor, v.$pageTitleSize);
+            }
+            ul {
+                @include flexCenter(0px, 0px);
+                justify-content: center;
+                gap: 20px;
+                li, a {
+                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                    text-transform: none;
+                    list-style-type: none;
+                    a:hover {
+                        color: v.$primayFontColor;
+                        transition: .7s;
+                    }
+                }
+                li:nth-of-type(2) {
+                    padding-left: 20px;
+                    border-left: 2px solid v.$firstPrimaryColor;
+                }
+            }
+        }
+    }
+}
+
+.cont-container {
+    @include flexCenter(0px, 0px);
+
+    .cont-content {
+        padding: 70px;
+        .cont-header {
+            h5 {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+            }
+            h3 {
+                @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
+            }
+            p {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                text-transform: none; 
+                font-stretch: wider;
+            }
+        }
+
+        .cont-form {
+            .cont-names {
+                margin-top: 40px;
+                @include flexCenter(0px, 0px);
+                gap: 20px;
+                input {
+                    @include defaultInput;
+                    flex-shrink: 1;
+                    flex-grow: 1;
+                }
+            }
+            .cont-form-elec {
+                margin-top: 40px;
+                @include flexCenter(0px, 0px);
+                gap: 20px;
+                input {
+                    @include defaultInput;
+                    flex-shrink: 1;
+                    flex-grow: 1;
+                }
+            }
+
+            textarea {
+                margin-top: 20px;
+                @include defaultInput;
+                height: 200px;
+                width: 100%;
+                flex-shrink: 1;
+                flex-grow: 1;
+                resize: none;
+            }
+            button {
+                margin-top: 20px;
+                @include defaultButton;
+                flex-shrink: 1;
+                flex-grow: 1;
+                bottom: 0px;
+            }
+        }
+    }
+    .cont-content {
+        width: 50%;
+    }
+    .cont-video {
+        flex-grow: 1;
+        width: 50%;
+        height: 97vh;
+
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.contact-information {
+    @include flexCenter(50px, v.$paddingMainWidth);
+    flex-wrap: wrap;
+
+    .cont-location, .cont-phone, .cont-mail, .cont-hours {
+        @include flexCenter(0px, 0px);
+        flex-basis: 500px;
+        flex-grow: 1;
+        flex-shrink: 1;
+        gap: 20px;
+
+        .cont-loc-icon, .cont-phone-icon, .cont-mail-icon, .cont-hours-icon {
+            background-color: v.$secondPrimaryColor;
+            font-size: 4em;
+            color: v.$firstPrimaryColor;
+            font-weight: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h5 {
+            @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+            text-transform: none;
+            font-weight: bolder
+        }
+        p {
+            @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+            text-transform: none;
+        }
+    }
+
+}
