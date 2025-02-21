@@ -1,44 +1,6 @@
 @use "./variables" as v;
 @use "./mixins" as *;
 
-.contact-header {
-    background-image: url("https://plus.unsplash.com/premium_photo-1677707394493-09962b13b675?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left center;
-
-    .cont-header-container {
-        background: rgba(v.$secondPrimaryColor, v.$backgroundopacity);
-        @include flexCenter(null, null);
-        justify-content: center;
-        height: 35vh;
-
-        .cont-header-content {
-            h3 {
-                @include sectionTitle(v.$firstPrimaryColor, v.$pageTitleSize);
-            }
-            ul {
-                @include flexCenter(0px, 0px);
-                justify-content: center;
-                gap: 20px;
-                li, a {
-                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
-                    text-transform: none;
-                    list-style-type: none;
-                    a:hover {
-                        color: v.$primayFontColor;
-                        transition: .7s;
-                    }
-                }
-                li:nth-of-type(2) {
-                    padding-left: 20px;
-                    border-left: 2px solid v.$firstPrimaryColor;
-                }
-            }
-        }
-    }
-}
-
 .cont-container {
     @include flexCenter(0px, 0px);
 
