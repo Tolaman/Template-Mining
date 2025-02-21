@@ -166,7 +166,8 @@
 .main-slider .list .item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main-slider .list .item::after {
   content: "";
@@ -282,7 +283,8 @@
 .main-slider .list .thumnail .item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .about-company {
@@ -502,7 +504,8 @@
 .industry .industry-info .ind-info-base .ind-info-video video {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .industry .industry-info .ind-info-base .ind-info-video #mute-unmute-button {
   display: flex;
@@ -638,10 +641,17 @@
   align-items: center;
 }
 .footer-newsletter .footer-newsletter-container .footer-newsletter-content .footer-newsletter-form input {
-  flex-basis: 350px;
   height: 50px;
+  color: #0C2359;
   padding: 10px;
+  border: 1px solid rgba(12, 35, 89, 0.3);
+  outline: none;
+  flex-basis: 350px;
   flex-shrink: 1;
+}
+.footer-newsletter .footer-newsletter-container .footer-newsletter-content .footer-newsletter-form input:focus {
+  border-color: #F09948;
+  transition: 0.5s;
 }
 .footer-newsletter .footer-newsletter-container .footer-newsletter-content .footer-newsletter-form button {
   color: #0C2359;
@@ -980,7 +990,8 @@ footer .footer-container .footer-copyright {
 .cont-container .cont-video video {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contact-information {
@@ -995,32 +1006,48 @@ footer .footer-container .footer-copyright {
   align-items: center;
   justify-content: space-between;
   padding: 0px 0px;
+  justify-content: flex-start;
   flex-basis: 500px;
   flex-grow: 1;
   flex-shrink: 1;
   gap: 20px;
+  height: 80px;
+  margin-top: 50px;
 }
 .contact-information .cont-location .cont-loc-icon, .contact-information .cont-location .cont-phone-icon, .contact-information .cont-location .cont-mail-icon, .contact-information .cont-location .cont-hours-icon, .contact-information .cont-phone .cont-loc-icon, .contact-information .cont-phone .cont-phone-icon, .contact-information .cont-phone .cont-mail-icon, .contact-information .cont-phone .cont-hours-icon, .contact-information .cont-mail .cont-loc-icon, .contact-information .cont-mail .cont-phone-icon, .contact-information .cont-mail .cont-mail-icon, .contact-information .cont-mail .cont-hours-icon, .contact-information .cont-hours .cont-loc-icon, .contact-information .cont-hours .cont-phone-icon, .contact-information .cont-hours .cont-mail-icon, .contact-information .cont-hours .cont-hours-icon {
   background-color: #F09948;
-  font-size: 4em;
+  width: 80px;
+  height: 80px;
+  font-size: 2.5em;
   color: #0C2359;
-  font-weight: 1px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.contact-information .cont-location h5, .contact-information .cont-phone h5, .contact-information .cont-mail h5, .contact-information .cont-hours h5 {
+.contact-information .cont-location .cont-loc-info, .contact-information .cont-location .cont-phone-info, .contact-information .cont-location .cont-mail-info, .contact-information .cont-location .cont-hours-info, .contact-information .cont-phone .cont-loc-info, .contact-information .cont-phone .cont-phone-info, .contact-information .cont-phone .cont-mail-info, .contact-information .cont-phone .cont-hours-info, .contact-information .cont-mail .cont-loc-info, .contact-information .cont-mail .cont-phone-info, .contact-information .cont-mail .cont-mail-info, .contact-information .cont-mail .cont-hours-info, .contact-information .cont-hours .cont-loc-info, .contact-information .cont-hours .cont-phone-info, .contact-information .cont-hours .cont-mail-info, .contact-information .cont-hours .cont-hours-info {
+  width: 45%;
+  height: 80px;
+}
+.contact-information .cont-location .cont-loc-info h5, .contact-information .cont-location .cont-phone-info h5, .contact-information .cont-location .cont-mail-info h5, .contact-information .cont-location .cont-hours-info h5, .contact-information .cont-phone .cont-loc-info h5, .contact-information .cont-phone .cont-phone-info h5, .contact-information .cont-phone .cont-mail-info h5, .contact-information .cont-phone .cont-hours-info h5, .contact-information .cont-mail .cont-loc-info h5, .contact-information .cont-mail .cont-phone-info h5, .contact-information .cont-mail .cont-mail-info h5, .contact-information .cont-mail .cont-hours-info h5, .contact-information .cont-hours .cont-loc-info h5, .contact-information .cont-hours .cont-phone-info h5, .contact-information .cont-hours .cont-mail-info h5, .contact-information .cont-hours .cont-hours-info h5 {
   text-transform: uppercase;
   color: #0C2359;
   font-size: 1em;
   text-transform: none;
   font-weight: bolder;
 }
-.contact-information .cont-location p, .contact-information .cont-phone p, .contact-information .cont-mail p, .contact-information .cont-hours p {
+.contact-information .cont-location .cont-loc-info p, .contact-information .cont-location .cont-phone-info p, .contact-information .cont-location .cont-mail-info p, .contact-information .cont-location .cont-hours-info p, .contact-information .cont-phone .cont-loc-info p, .contact-information .cont-phone .cont-phone-info p, .contact-information .cont-phone .cont-mail-info p, .contact-information .cont-phone .cont-hours-info p, .contact-information .cont-mail .cont-loc-info p, .contact-information .cont-mail .cont-phone-info p, .contact-information .cont-mail .cont-mail-info p, .contact-information .cont-mail .cont-hours-info p, .contact-information .cont-hours .cont-loc-info p, .contact-information .cont-hours .cont-phone-info p, .contact-information .cont-hours .cont-mail-info p, .contact-information .cont-hours .cont-hours-info p {
   text-transform: uppercase;
   color: #0C2359;
   font-size: 1em;
   text-transform: none;
+}
+.contact-information .cont-location .cont-loc-info ul, .contact-information .cont-location .cont-loc-info ul li, .contact-information .cont-location .cont-phone-info ul, .contact-information .cont-location .cont-phone-info ul li, .contact-information .cont-location .cont-mail-info ul, .contact-information .cont-location .cont-mail-info ul li, .contact-information .cont-location .cont-hours-info ul, .contact-information .cont-location .cont-hours-info ul li, .contact-information .cont-phone .cont-loc-info ul, .contact-information .cont-phone .cont-loc-info ul li, .contact-information .cont-phone .cont-phone-info ul, .contact-information .cont-phone .cont-phone-info ul li, .contact-information .cont-phone .cont-mail-info ul, .contact-information .cont-phone .cont-mail-info ul li, .contact-information .cont-phone .cont-hours-info ul, .contact-information .cont-phone .cont-hours-info ul li, .contact-information .cont-mail .cont-loc-info ul, .contact-information .cont-mail .cont-loc-info ul li, .contact-information .cont-mail .cont-phone-info ul, .contact-information .cont-mail .cont-phone-info ul li, .contact-information .cont-mail .cont-mail-info ul, .contact-information .cont-mail .cont-mail-info ul li, .contact-information .cont-mail .cont-hours-info ul, .contact-information .cont-mail .cont-hours-info ul li, .contact-information .cont-hours .cont-loc-info ul, .contact-information .cont-hours .cont-loc-info ul li, .contact-information .cont-hours .cont-phone-info ul, .contact-information .cont-hours .cont-phone-info ul li, .contact-information .cont-hours .cont-mail-info ul, .contact-information .cont-hours .cont-mail-info ul li, .contact-information .cont-hours .cont-hours-info ul, .contact-information .cont-hours .cont-hours-info ul li {
+  text-transform: uppercase;
+  color: #0C2359;
+  font-size: 1em;
+  text-transform: none;
+  list-style-type: none;
+  padding-left: 0px;
 }
 
 * {
@@ -1044,6 +1071,4 @@ a {
 
 .main-slider .thumnail .item.active {
   filter: brightness(1);
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

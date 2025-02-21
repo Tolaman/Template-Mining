@@ -120,30 +120,45 @@
 
     .cont-location, .cont-phone, .cont-mail, .cont-hours {
         @include flexCenter(0px, 0px);
+        justify-content: flex-start;
         flex-basis: 500px;
         flex-grow: 1;
         flex-shrink: 1;
         gap: 20px;
+        height: 80px;
+        margin-top: 50px;
 
         .cont-loc-icon, .cont-phone-icon, .cont-mail-icon, .cont-hours-icon {
             background-color: v.$secondPrimaryColor;
-            font-size: 4em;
+            width: 80px;
+            height: 80px;
+            font-size: 2.5em;
             color: v.$firstPrimaryColor;
-            font-weight: 1px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        h5 {
-            @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
-            text-transform: none;
-            font-weight: bolder
+        .cont-loc-info, .cont-phone-info, .cont-mail-info, .cont-hours-info {
+            width: 45%;
+            height: 80px;
+            h5 {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                text-transform: none;
+                font-weight: bolder;
+            }
+            p {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                text-transform: none;
+            }
+            ul, ul li {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                text-transform: none;
+                list-style-type: none;
+                padding-left: 0px;
+            }
         }
-        p {
-            @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
-            text-transform: none;
-        }
+        
     }
 
 }
