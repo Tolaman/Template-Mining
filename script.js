@@ -60,3 +60,14 @@ mutedButton.addEventListener("click", () => {
         mutedButton.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>'; // Change the button icon
     }
 });
+
+////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+let services = document.getElementsByClassName('serv-article');
+let randomValue = Math.floor(Math.random() * 3);
+
+for (let i = 0; i < services.length; i++) {
+    services[i].style.flexShrink = randomValue;
+    services[i].style.flexGrow = randomValue;
+}
