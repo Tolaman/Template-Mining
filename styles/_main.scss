@@ -83,18 +83,7 @@
             .arrows {
                 z-index: 10;
                 button {
-                    border: 1px solid v.$primayFontColor;
-                    border-radius: 100%;
-                    width: 60px;
-                    height: 60px;
-                    background: none;
-                    color: v.$primayFontColor;
-    
-                    &:hover {
-                        background-color: v.$secondPrimaryColor;
-                        border: 1px solid v.$secondPrimaryColor;
-                        transition: all .7s ease;
-                    }
+                    @include slideButton;
                 }
             }
 
