@@ -193,17 +193,24 @@
     }
 }
 
-@mixin slideButton {
-    border: 1px solid v.$primayFontColor;
+@mixin slideButton($backgroundColor, $fontColor) {
+    border: 1px solid $fontColor;
     border-radius: 100%;
     width: 60px;
     height: 60px;
     background: none;
-    color: v.$primayFontColor;
-    
+    color: $fontColor;
+
     &:hover {
-        background-color: v.$secondPrimaryColor;
-        border: 1px solid v.$secondPrimaryColor;
+        background-color: $backgroundColor; 
+        border: 1px solid $backgroundColor; 
         transition: all .7s ease;
+    }
+}
+
+@mixin hoverLink {
+    &:hover {
+        opacity: .5;
+        transition: v.$transition;
     }
 }

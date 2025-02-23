@@ -99,10 +99,7 @@ footer {
                     a {
                         @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
                         text-transform: none; 
-
-                        &:hover {
-                            opacity: .5;
-                        }
+                        @include hoverLink;
                     }
                 }
             }

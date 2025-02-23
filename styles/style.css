@@ -732,6 +732,7 @@ footer .footer-container .footer-content ul li a {
 }
 footer .footer-container .footer-content ul li a:hover {
   opacity: 0.5;
+  transition: 0.5s;
 }
 footer .footer-container .footer-content .footer-comp-des {
   flex-basis: 300px;
@@ -1105,6 +1106,11 @@ footer .footer-container .footer-copyright {
   font-size: 1.3em;
   text-transform: none;
   font-weight: bold;
+  margin-top: 10px;
+}
+.serv-container .serv-content article .serv-art-info .serv-art-content h4 a:hover {
+  opacity: 0.5;
+  transition: 0.5s;
 }
 .serv-container .serv-content article .serv-art-info .serv-art-content p {
   text-transform: uppercase;
@@ -1112,6 +1118,22 @@ footer .footer-container .footer-copyright {
   font-size: 1em;
   text-transform: none;
   display: none;
+}
+.serv-container .serv-content article .serv-art-info button {
+  border: 1px solid #0C2359;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  background: none;
+  color: #0C2359;
+}
+.serv-container .serv-content article .serv-art-info button:hover {
+  background-color: #0C2359;
+  border: 1px solid #0C2359;
+  transition: all 0.7s ease;
+}
+.serv-container .serv-content article .serv-art-info button:hover {
+  color: #F09948;
 }
 .serv-container .serv-content article:hover .serv-art-info .serv-art-content p {
   display: block;

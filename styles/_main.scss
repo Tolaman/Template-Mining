@@ -83,7 +83,7 @@
             .arrows {
                 z-index: 10;
                 button {
-                    @include slideButton;
+                    @include slideButton(v.$secondPrimaryColor, v.$primayFontColor);
                 }
             }
 

@@ -86,12 +86,21 @@
                         @include textCase(v.$firstPrimaryColor, 1.3em);
                         text-transform: none;
                         font-weight: bold;
+                        margin-top: 10px;
+                        @include hoverLink;
                     }
                     p {
                         @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
                         text-transform: none;
                         display: none;
                     };
+                }
+
+                button {
+                    @include slideButton(v.$firstPrimaryColor, v.$firstPrimaryColor);
+                    &:hover {
+                        color: v.$secondPrimaryColor;
+                    }
                 }
             }
 
