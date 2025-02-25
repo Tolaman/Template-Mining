@@ -130,3 +130,11 @@
     }
 
 }
+
+.google-map {
+    padding: v.$paddingMainWidth;
+    iframe {
+        width: 100%;
+        height: 500px;
+    }
+}
