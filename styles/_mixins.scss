@@ -214,3 +214,23 @@
         transition: v.$transition;
     }
 }
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+@mixin activeButton {
+    background-color: v.$firstPrimaryColor;
+    color: v.$primayFontColor;
+    padding: 0.9rem 1.6rem;
+    position: relative;
+    font-weight: bolder;
+    text-align: center;
+    border: none;
+    flex-grow: 1;
+
+    &:hover {
+        background-color: v.$secondPrimaryColor;
+        color: v.$firstPrimaryColor;
+        transition: v.$transition;
+    }
+}

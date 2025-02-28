@@ -554,7 +554,7 @@
   justify-content: space-between;
   padding: 20px;
 }
-.industry .industry-info .ind-info-base .ind-info-header .ind-info-more button {
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more .button {
   color: #0C2359;
   background-color: #F09948;
   border: 1px solid #F09948;
@@ -565,7 +565,10 @@
   flex-shrink: unset;
   flex-basis: auto;
 }
-.industry .industry-info .ind-info-base .ind-info-header .ind-info-more button::after {
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more .button i {
+  margin-right: 5px;
+}
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more .button::after {
   content: "";
   position: absolute;
   top: 0;
@@ -577,11 +580,11 @@
   z-index: 1;
   border: 1px solid #F09948;
 }
-.industry .industry-info .ind-info-base .ind-info-header .ind-info-more button::after {
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more .button::after {
   top: 0.4rem;
   left: 0.4rem;
 }
-.industry .industry-info .ind-info-base .ind-info-header .ind-info-more button:hover::after {
+.industry .industry-info .ind-info-base .ind-info-header .ind-info-more .button:hover::after {
   top: -0.4rem;
   left: -0.4rem;
   bottom: 0;
@@ -589,6 +592,123 @@
 }
 .industry .industry-info .ind-info-base .ind-info-header .ind-info-more .ind-info-more-call {
   color: #0C2359;
+}
+
+.team {
+  padding: 100px 20px;
+}
+.team .team-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px;
+  flex-wrap: wrap;
+}
+.team .team-header .team-header-title {
+  width: 550px;
+}
+.team .team-header .team-header-title h5 {
+  text-transform: uppercase;
+  color: #0C2359;
+  font-size: 1em;
+}
+.team .team-header .team-header-title h3 {
+  color: #0C2359;
+  font-size: 2.5em;
+  font-weight: bolder;
+}
+.team .team-header .team-header-desc {
+  width: 650px;
+}
+.team .team-header .team-header-desc .team-desc-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px;
+  gap: 2px;
+}
+.team .team-header .team-header-desc .team-desc-button button {
+  background-color: #0C2359;
+  color: white;
+  padding: 0.9rem 1.6rem;
+  position: relative;
+  font-weight: bolder;
+  text-align: center;
+  border: none;
+  flex-grow: 1;
+}
+.team .team-header .team-header-desc .team-desc-button button:hover {
+  background-color: #F09948;
+  color: #0C2359;
+  transition: 0.5s;
+}
+.team .team-header .team-header-desc .team-desc-button .active {
+  background-color: #F09948;
+  color: #0C2359;
+}
+.team .team-header .team-header-desc .team-desc-text {
+  text-transform: uppercase;
+  color: #0C2359;
+  font-size: 1em;
+  text-transform: none;
+  margin-top: 40px;
+}
+.team .team-members {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 0px;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.team .team-members .team-member {
+  width: 350px;
+  height: 500px;
+}
+.team .team-members .team-member .team-member-img img {
+  width: 100%;
+  height: 410px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
+.team .team-members .team-member .team-member-img .team-member-social {
+  position: absolute;
+  width: 350px;
+  margin-top: -60px;
+  background-color: #F09948;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px;
+  justify-content: center;
+  gap: 20px;
+}
+.team .team-members .team-member .team-member-img .team-member-social a {
+  color: #0C2359;
+  font-size: 1em;
+}
+.team .team-members .team-member .team-member-img .team-member-social a:hover {
+  opacity: 0.4;
+  transition: 0.5s;
+}
+.team .team-members .team-member .team-member-info {
+  text-align: center;
+  padding-top: 10px;
+}
+.team .team-members .team-member .team-member-info h5 {
+  text-transform: uppercase;
+  color: #0C2359;
+  font-size: 1em;
+}
+.team .team-members .team-member .team-member-info h4 {
+  color: #0C2359;
+  font-size: 1.6em;
+  font-weight: bolder;
+  text-transform: none;
 }
 
 .footer-newsletter {
