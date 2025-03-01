@@ -142,151 +142,70 @@
   color: white;
 }
 
+/*
 .main-slider {
-  height: 90vh;
-  position: relative;
-}
-.main-slider .list .item {
-  position: absolute;
-  inset: 0 0 0 0;
-  overflow: hidden;
-  opacity: 0;
-}
-.main-slider .list .item .hidden-element {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(-100%);
-  transition: all 1s ease;
-}
-.main-slider .list .item .show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
-.main-slider .list .item img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.main-slider .list .item::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-color: #0C2359;
-  opacity: 60%;
-}
-.main-slider .list .item .content {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 40px;
-  top: 20%;
-  z-index: 1;
-  color: white;
-}
-.main-slider .list .item .content .content-title {
-  width: 50%;
-}
-.main-slider .list .item .content .content-title h5 {
-  font-size: 1em;
-}
-.main-slider .list .item .content .content-title h2 {
-  font-size: 5em;
-}
-.main-slider .list .item .content .content-title button {
-  color: #0C2359;
-  background-color: #F09948;
-  border: 1px solid #F09948;
-  cursor: pointer;
-  padding: 0.6rem 1.6rem;
-  position: relative;
-  font-weight: bolder;
-  flex-shrink: unset;
-  flex-basis: auto;
-  z-index: 10;
-  margin-top: 50px;
-}
-.main-slider .list .item .content .content-title button::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  transition: all 0.5s ease;
-  z-index: 1;
-  border: 1px solid #F09948;
-}
-.main-slider .list .item .content .content-title button::after {
-  top: 0.4rem;
-  left: 0.4rem;
-}
-.main-slider .list .item .content .content-title button:hover::after {
-  top: -0.4rem;
-  left: -0.4rem;
-  bottom: 0;
-  right: 0;
-}
-.main-slider .list .item .content .paragraph {
-  flex-basis: 300px;
-  flex-grow: 1;
-  max-width: 34%;
-}
-.main-slider .list .thumnail {
-  position: absolute;
-  bottom: 80px;
-  z-index: 11;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  height: 130px;
-  padding: 0 50px;
-  box-sizing: border-box;
-  overflow: auto;
-}
-.main-slider .list .thumnail .arrows {
-  z-index: 10;
-}
-.main-slider .list .thumnail .arrows button {
-  border: 1px solid white;
-  border-radius: 100%;
-  width: 60px;
-  height: 60px;
-  background: none;
-  color: white;
-}
-.main-slider .list .thumnail .arrows button:hover {
-  background-color: #F09948;
-  border: 1px solid #F09948;
-  transition: all 0.7s ease;
-}
-.main-slider .list .thumnail .item {
-  width: 250px;
-  border: 2px solid #F09948;
-  filter: brightness(0.5);
-  transition: 0.5s;
-}
-.main-slider .list .thumnail .item::after {
-  opacity: 0;
-}
-.main-slider .list .thumnail .item img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
+    height: 90vh;
+    position: relative;
 
+    .list {
+
+        .item {
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: v.$firstPrimaryColor;
+                opacity: 60%;
+            }
+
+            .content {
+                //position: absolute;
+                text-align: left;
+                @include flexCenter(v.$paddingMainWidth, 0px);
+                justify-content: flex-start;
+                //flex-wrap: wrap;
+                gap: 40px;
+                //top: 20%;
+                z-index: 1;
+                color: v.$primayFontColor;
+
+                .content-title {
+                    width: 50%;
+
+                    h5 {
+                        font-size: v.$h5FontSize;
+                        //color: v.$primayFontColor;
+                    }
+                    h2 {
+                        font-size: 5em;
+                    }
+                    button {
+                        @include defaultButton;
+                        z-index: 10;
+                        margin-top: 50px;
+                    }
+                }
+
+                .paragraph {
+                    flex-basis: 300px;
+                    flex-grow: 1;
+                    max-width: 34%;
+                }
+            }
+        }
+    }
+}
+*/
 .about-company {
   background: url("../images/premium_photo-1667811951673-3b3e8d6742c7.avif");
 }

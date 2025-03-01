@@ -1,6 +1,7 @@
 @use "./mixins" as *;
 @use "./variables" as v;
 
+/*
 .main-slider {
     height: 90vh;
     position: relative;
@@ -8,11 +9,6 @@
     .list {
 
         .item {
-            @include scrollAnimationFromLeft;
-            position: absolute;
-            inset: 0 0 0 0;
-            overflow: hidden;
-            opacity: 0;
 
             img {
                 width: 100%;
@@ -32,12 +28,13 @@
             }
 
             .content {
-                position: absolute;
-                @include flexCenter(v.$paddingMainWidth, null);
+                //position: absolute;
+                text-align: left;
+                @include flexCenter(v.$paddingMainWidth, 0px);
                 justify-content: flex-start;
-                flex-wrap: wrap;
+                //flex-wrap: wrap;
                 gap: 40px;
-                top: 20%;
+                //top: 20%;
                 z-index: 1;
                 color: v.$primayFontColor;
 
@@ -65,47 +62,9 @@
                 }
             }
         }
-
-        .thumnail {
-            position: absolute;
-            bottom: 80px;
-            z-index: 11;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            height: 130px;
-            padding: 0 50px;
-            box-sizing: border-box;
-            overflow: auto;
-
-            .arrows {
-                z-index: 10;
-                button {
-                    @include slideButton(v.$secondPrimaryColor, v.$primayFontColor);
-                }
-            }
-
-            .item {
-                width: 250px;
-                border: 2px solid v.$secondPrimaryColor;
-                filter: brightness(.5);
-                transition: .5s;
-               
-                &::after {
-                    opacity: 0;
-                }
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-        }
     }
 }
+*/
 
 ////////////////////////////////
 
