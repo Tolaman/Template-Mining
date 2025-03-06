@@ -142,70 +142,113 @@
   color: white;
 }
 
-/*
 .main-slider {
-    height: 90vh;
-    position: relative;
-
-    .list {
-
-        .item {
-
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            &::after {
-                content: '';
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                left: 0;
-                bottom: 0;
-                background-color: v.$firstPrimaryColor;
-                opacity: 60%;
-            }
-
-            .content {
-                //position: absolute;
-                text-align: left;
-                @include flexCenter(v.$paddingMainWidth, 0px);
-                justify-content: flex-start;
-                //flex-wrap: wrap;
-                gap: 40px;
-                //top: 20%;
-                z-index: 1;
-                color: v.$primayFontColor;
-
-                .content-title {
-                    width: 50%;
-
-                    h5 {
-                        font-size: v.$h5FontSize;
-                        //color: v.$primayFontColor;
-                    }
-                    h2 {
-                        font-size: 5em;
-                    }
-                    button {
-                        @include defaultButton;
-                        z-index: 10;
-                        margin-top: 50px;
-                    }
-                }
-
-                .paragraph {
-                    flex-basis: 300px;
-                    flex-grow: 1;
-                    max-width: 34%;
-                }
-            }
-        }
-    }
+  height: 90vh;
 }
-*/
+.main-slider .slide {
+  width: 100%;
+}
+.main-slider .slide .list {
+  width: 100%;
+}
+.main-slider .slide .list .carousel-item {
+  height: 90vh;
+  width: 100%;
+}
+.main-slider .slide .list .carousel-item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-slider .slide .list .carousel-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #0C2359;
+  opacity: 60%;
+}
+.main-slider .slide .list .carousel-item .carousel-caption {
+  top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px;
+  flex-wrap: nowrap;
+  text-align: left;
+  justify-content: flex-start;
+  gap: 40px;
+  z-index: 1;
+  color: white;
+}
+.main-slider .slide .list .carousel-item .carousel-caption .content-title {
+  width: 700px;
+}
+.main-slider .slide .list .carousel-item .carousel-caption .content-title h5 {
+  font-size: 1em;
+}
+.main-slider .slide .list .carousel-item .carousel-caption .content-title h2 {
+  font-size: 5em;
+}
+.main-slider .slide .list .carousel-item .carousel-caption .content-title button {
+  color: #0C2359;
+  background-color: #F09948;
+  border: 1px solid #F09948;
+  cursor: pointer;
+  padding: 0.6rem 1.6rem;
+  position: relative;
+  font-weight: bolder;
+  flex-shrink: unset;
+  flex-basis: auto;
+  z-index: 10;
+  margin-top: 50px;
+}
+.main-slider .slide .list .carousel-item .carousel-caption .content-title button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  transition: all 0.5s ease;
+  z-index: 1;
+  border: 1px solid #F09948;
+}
+.main-slider .slide .list .carousel-item .carousel-caption .content-title button::after {
+  top: 0.4rem;
+  left: 0.4rem;
+}
+.main-slider .slide .list .carousel-item .carousel-caption .content-title button:hover::after {
+  top: -0.4rem;
+  left: -0.4rem;
+  bottom: 0;
+  right: 0;
+}
+.main-slider .slide .list .carousel-item .carousel-caption .paragraph {
+  width: 700px;
+  flex-grow: 1;
+  margin-top: 50px;
+}
+.main-slider .slide .carousel-control-prev, .main-slider .slide .carousel-control-next {
+  border: 1px solid white;
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  background: none;
+  color: white;
+  top: 40%;
+  margin: 20px;
+}
+.main-slider .slide .carousel-control-prev:hover, .main-slider .slide .carousel-control-next:hover {
+  background-color: #F09948;
+  border: 1px solid #F09948;
+  transition: all 0.7s ease;
+}
+
 .about-company {
   background: url("../images/premium_photo-1667811951673-3b3e8d6742c7.avif");
 }
