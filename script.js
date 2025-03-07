@@ -37,3 +37,5 @@ for (let i = 0; i < services.length; i++) {
     services[i].style.flexShrink = randomValue;
     services[i].style.flexGrow = randomValue;
 }
+
+////////////////////////////////////////////////////////////////
