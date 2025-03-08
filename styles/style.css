@@ -268,7 +268,7 @@
   opacity: 0.94;
   text-transform: uppercase;
   color: white;
-  padding: 100px 20px;
+  padding: 60px 20px;
 }
 .about-company .about-comp .about-comp-des h5 {
   font-size: 1em;
@@ -293,86 +293,130 @@
   font-size: 1.2em;
 }
 
-.scope .container .scope-title h5 {
+.scope {
+  padding: 45px 20px;
+}
+.scope .scope-title h5 {
   text-transform: uppercase;
   color: #0C2359;
   font-size: 1em;
 }
-.scope .container .scope-title h3 {
+.scope .scope-title h3 {
   color: #0C2359;
   font-size: 2.5em;
   font-weight: bolder;
 }
-.scope .container .circle {
+.scope .scope-container {
+  padding: 45px 160px;
+}
+.scope .scope-container .scope-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px;
+  gap: 70px;
+  width: 100%;
+}
+.scope .scope-container .scope-row .column-left .number-circle, .scope .scope-container .scope-row .column-right .number-circle {
   padding: 13px 20px;
   border-radius: 50%;
   background-color: #0C2359;
   color: white;
-  max-height: 50px;
+  height: 50px;
+  width: 50px;
   z-index: 2;
 }
-.scope .container .how-it-works.row .col-2 {
-  align-self: stretch;
+.scope .scope-container .scope-row .scope-row-text {
+  width: 50%;
 }
-.scope .container .how-it-works.row .col-2::after {
-  content: "";
-  position: absolute;
-  border-left: 3px solid #ED8D8D;
-  z-index: 1;
+.scope .scope-container .scope-row .scope-row-text h5 {
+  text-transform: uppercase;
+  color: #0C2359;
+  font-size: 1.2em;
+  font-weight: bolder;
 }
-.scope .container .how-it-works.row .col-2.bottom::after {
-  height: 50%;
-  left: 50%;
-  top: 50%;
+.scope .scope-container .scope-row .scope-row-text p {
+  text-transform: uppercase;
+  color: #0C2359;
+  font-size: 1em;
+  text-transform: none;
 }
-.scope .container .how-it-works.row .col-2.full::after {
-  height: 100%;
-  left: calc(50% - 3px);
+.scope .scope-container .left-column {
+  justify-content: flex-start;
+  text-align: left;
 }
-.scope .container .how-it-works.row .col-2.top::after {
-  height: 50%;
-  left: 50%;
-  top: 0;
+.scope .scope-container .right-column {
+  justify-content: flex-end;
+  text-align: right;
+  margin-top: 10px;
 }
-.scope .container .timeline div {
+.scope .scope-container .scope-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 0px;
+}
+.scope .scope-container .scope-line div {
   padding: 0;
   height: 40px;
 }
-.scope .container .timeline hr {
-  border-top: 3px solid #ED8D8D;
-  margin: 0;
-  top: 17px;
-  position: relative;
-}
-.scope .container .timeline .col-2 {
-  display: flex;
-  overflow: hidden;
-}
-.scope .container .timeline .corner {
-  border: 3px solid #ED8D8D;
+.scope .scope-container .scope-line div .corner {
   width: 100%;
   position: relative;
-  border-radius: 15px;
+  height: 50px;
 }
-.scope .container .timeline .top-right {
-  left: 50%;
-  top: -50%;
+.scope .scope-container .scope-line div .bottom-left {
+  border-bottom: 3px solid #0C2359;
+  border-left: 3px solid #0C2359;
+  left: 10%;
+  top: -60%;
+  border-radius: 0px 0px 0px 15px;
 }
-.scope .container .timeline .left-bottom {
-  left: -50%;
-  top: calc(50% - 3px);
+.scope .scope-container .scope-line div .top-right {
+  border-top: 3px solid #0C2359;
+  border-right: 3px solid #0C2359;
+  right: 11%;
+  top: 57%;
+  border-radius: 0px 15px 0px 0px;
 }
-.scope .container .timeline .top-left {
-  left: -50%;
-  top: -50%;
+.scope .scope-container .scope-line div .top-left {
+  border-top: 3px solid #0C2359;
+  border-left: 3px solid #0C2359;
+  left: 10%;
+  top: 37%;
+  border-radius: 15px 0px 0px 0px;
 }
-.scope .container .timeline .right-bottom {
-  left: 50%;
-  top: calc(50% - 3px);
+.scope .scope-container .scope-line div .bottom-right {
+  border-bottom: 3px solid #0C2359;
+  border-right: 3px solid #0C2359;
+  right: 11%;
+  top: -32px;
+  border-radius: 0px 0px 15px 0px;
+}
+.scope .scope-container .scope-line .scope-line-col {
+  width: 30%;
+}
+.scope .scope-container .scope-line .scope-line-1 {
+  width: 100%;
+}
+.scope .scope-container .scope-line .scope-line-1 hr {
+  border-top: 3px solid #0C2359;
+  top: 7px;
+  position: relative;
+  opacity: 1;
+}
+.scope .scope-container .scope-line .scope-line-2 {
+  width: 100%;
+}
+.scope .scope-container .scope-line .scope-line-2 hr {
+  border-top: 3px solid #0C2359;
+  top: -1px;
+  position: relative;
+  opacity: 1;
 }
 
 .industry .industry-service {
-  padding: 100px 20px;
+  padding: 25px 20px;
 }
 .industry .industry-service .ind-header {
   color: #0C2359;
@@ -511,7 +555,7 @@
   flex-basis: 350px;
 }
 .industry .industry-info {
-  padding: 20px;
+  padding: 75px 20px;
 }
 .industry .industry-info .ind-info-base {
   display: flex;
@@ -635,7 +679,7 @@
 }
 
 .team {
-  padding: 100px 20px;
+  padding: 60px 20px;
 }
 .team .team-header {
   display: flex;
@@ -697,7 +741,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 0px;
+  padding: 60px 0px;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;

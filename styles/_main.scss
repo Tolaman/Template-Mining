@@ -116,92 +116,135 @@
 }
 
 .scope {
-    .container{
-        .scope-title{
-            h5{
-                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+    padding: v.$paddingBoxHeight + 20px v.$paddingMainWidth;
+    .scope-title{
+        h5{
+            @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+        }
+        h3{
+            @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
+        }
+    }
+    .scope-container{
+        padding: v.$paddingBoxHeight + 20px v.$paddingBoxWidth + 150px;
+        .scope-row {
+            @include flexCenter(0px, 0px);
+            gap: 70px;
+            width: 100%;
+
+            .column-left, .column-right {
+                .number-circle {
+                    padding: 13px 20px;
+                    border-radius: 50%;
+                    background-color: v.$firstPrimaryColor;
+                    color: v.$primayFontColor;
+                    height: 50px;
+                    width: 50px;
+                    z-index: 2;
+                }
             }
-            h3{
-                @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
+
+            .scope-row-text {
+                width: 50%;
+
+                h5 {
+                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize + .2em);
+                    font-weight: bolder;                
+                }
+                p {
+                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                    text-transform: none;
+                }
             }
         }
-        
-        .circle {
-          padding: 13px 20px;
-          border-radius: 50%;
-          background-color: v.$firstPrimaryColor;
-          color: v.$primayFontColor;
-          max-height: 50px;
-          z-index: 2;
+        .left-column {
+            justify-content: flex-start;
+            text-align: left;
         }
 
-        .how-it-works.row .col-2 {
-          align-self: stretch;
-        }
-        .how-it-works.row .col-2::after {
-          content: "";
-          position: absolute;
-          border-left: 3px solid #ED8D8D;
-          z-index: 1;
-        }
-        .how-it-works.row .col-2.bottom::after {
-          height: 50%;
-          left: 50%;
-          top: 50%;
-        }
-        .how-it-works.row .col-2.full::after {
-          height: 100%;
-          left: calc(50% - 3px);
-        }
-        .how-it-works.row .col-2.top::after {
-          height: 50%;
-          left: 50%;
-          top: 0;
+        .right-column {
+            justify-content: flex-end;
+            text-align: right;
+            margin-top: 10px;
         }
 
+        .scope-line {
+            @include flexCenter(0px, 0px);
+            div {
+                padding: 0;
+                height: 40px;
 
-        .timeline div {
-          padding: 0;
-          height: 40px;
-        }
-        .timeline hr {
-          border-top: 3px solid #ED8D8D;
-          margin: 0;
-          top: 17px;
-          position: relative;
-        }
-        .timeline .col-2 {
-          display: flex;
-          overflow: hidden;
-        }
-        .timeline .corner {
-          border: 3px solid #ED8D8D;
-          width: 100%;
-          position: relative;
-          border-radius: 15px;
-        }
-        .timeline .top-right {
-          left: 50%;
-          top: -50%;
-        }
-        .timeline .left-bottom {
-          left: -50%;
-          top: calc(50% - 3px);
-        }
-        .timeline .top-left {
-          left: -50%;
-          top: -50%;
-        }
-        .timeline .right-bottom {
-          left: 50%;
-          top: calc(50% - 3px);
+                .corner {
+                    width: 100%;
+                    position: relative;
+                    height: 50px;
+                }
+
+                .bottom-left {
+                    border-bottom: 3px solid v.$firstPrimaryColor;
+                    border-left: 3px solid v.$firstPrimaryColor;
+                    left: 10%;
+                    top: -60%;
+                    border-radius: 0px 0px 0px 15px;
+                }
+
+                .top-right {
+                    border-top: 3px solid v.$firstPrimaryColor;
+                    border-right: 3px solid v.$firstPrimaryColor;
+                    right: 11%;
+                    top: 57%;
+                    border-radius: 0px 15px 0px 0px;
+                }
+
+                .top-left {
+                    border-top: 3px solid v.$firstPrimaryColor;
+                    border-left: 3px solid v.$firstPrimaryColor;
+                    left: 10%;
+                    top: 37%;
+                    border-radius: 15px 0px 0px 0px;
+                }
+
+                .bottom-right {
+                    border-bottom: 3px solid v.$firstPrimaryColor;
+                    border-right: 3px solid v.$firstPrimaryColor;
+                    right: 11%;
+                    top: -32px;
+                    border-radius: 0px 0px 15px 0px;
+                }
+            }
+
+            .scope-line-col {
+                width: 30%;
+            }
+
+            .scope-line-1 {
+                width: 100%;
+                hr {
+                    border-top: 3px solid v.$firstPrimaryColor;
+                    //margin: 0;
+                    top: 7px;
+                    position: relative;
+                    opacity: 1;
+                }
+            }
+
+            .scope-line-2 {
+                width: 100%;
+                hr {
+                    border-top: 3px solid v.$firstPrimaryColor;
+                    //margin: 0;
+                    top: -1px;
+                    position: relative;
+                    opacity: 1;
+                }
+            }
         }
     }
 }
 
 .industry {
     .industry-service {
-        padding: v.$paddingMainHeight v.$paddingMainWidth;
+        padding: v.$paddingBoxHeight v.$paddingMainWidth;
         .ind-header {
             color: v.$firstPrimaryColor;
             h5 {
@@ -243,7 +286,7 @@
     }
 
     .industry-info {
-        padding: null v.$paddingMainWidth;
+        padding: v.$paddingBoxHeight + 50px v.$paddingMainWidth;
 
         .ind-info-base {
             @include flexCenter(null, null);
