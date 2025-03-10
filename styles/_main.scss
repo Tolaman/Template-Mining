@@ -115,128 +115,161 @@
     }
 }
 
-.scope {
+.scope-and-indentity{
     padding: v.$paddingBoxHeight + 20px v.$paddingMainWidth;
-    .scope-title{
-        h5{
-            @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+    @include flexCenter(null, null);
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .scope {
+        flex-basis: 50%;
+        .scope-title{
+            h5{
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+            }
+            h3{
+                @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
+            }
         }
-        h3{
-            @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
+        .scope-container{
+            padding: v.$paddingBoxHeight + 20px v.$paddingBoxWidth + 50px;
+            .scope-row {
+                @include flexCenter(null, null);
+                gap: 20px;
+                width: 100%;
+
+                .column-left, .column-right {
+                    .number-circle {
+                        padding: 13px 20px;
+                        border-radius: 50%;
+                        background-color: v.$firstPrimaryColor;
+                        color: v.$primayFontColor;
+                        height: 50px;
+                        width: 50px;
+                        z-index: 2;
+                    }
+                }
+
+                .scope-row-text {
+                    width: 80%;
+
+                    h5 {
+                        @include textCase(v.$firstPrimaryColor, v.$h5FontSize + .2em);
+                        font-weight: bolder;                
+                    }
+                    p {
+                        @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                        text-transform: none;
+                    }
+                }
+            }
+            .left-column {
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .right-column {
+                justify-content: flex-end;
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .scope-line {
+                @include flexCenter(null, null);
+                div {
+                    padding: 0;
+                    height: 40px;
+
+                    .corner {
+                        width: 100%;
+                        position: relative;
+                        height: 50px;
+                    }
+
+                    .bottom-left {
+                        border-bottom: 3px solid v.$firstPrimaryColor;
+                        border-left: 3px solid v.$firstPrimaryColor;
+                        left: 10%;
+                        top: -60%;
+                        border-radius: 0px 0px 0px 15px;
+                    }
+
+                    .top-right {
+                        border-top: 3px solid v.$firstPrimaryColor;
+                        border-right: 3px solid v.$firstPrimaryColor;
+                        right: 11%;
+                        top: 57%;
+                        border-radius: 0px 15px 0px 0px;
+                    }
+
+                    .top-left {
+                        border-top: 3px solid v.$firstPrimaryColor;
+                        border-left: 3px solid v.$firstPrimaryColor;
+                        left: 10%;
+                        top: 37%;
+                        border-radius: 15px 0px 0px 0px;
+                    }
+
+                    .bottom-right {
+                        border-bottom: 3px solid v.$firstPrimaryColor;
+                        border-right: 3px solid v.$firstPrimaryColor;
+                        right: 11%;
+                        top: -32px;
+                        border-radius: 0px 0px 15px 0px;
+                    }
+                }
+
+                .scope-line-col {
+                    width: 30%;
+                }
+
+                .scope-line-1 {
+                    width: 100%;
+                    hr {
+                        border-top: 3px solid v.$firstPrimaryColor;
+                        //margin: 0;
+                        top: 7px;
+                        position: relative;
+                        opacity: 1;
+                    }
+                }
+
+                .scope-line-2 {
+                    width: 100%;
+                    hr {
+                        border-top: 3px solid v.$firstPrimaryColor;
+                        //margin: 0;
+                        top: -1px;
+                        position: relative;
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
-    .scope-container{
-        padding: v.$paddingBoxHeight + 20px v.$paddingBoxWidth + 150px;
-        .scope-row {
-            @include flexCenter(0px, 0px);
-            gap: 70px;
-            width: 100%;
 
-            .column-left, .column-right {
-                .number-circle {
-                    padding: 13px 20px;
-                    border-radius: 50%;
-                    background-color: v.$firstPrimaryColor;
-                    color: v.$primayFontColor;
-                    height: 50px;
-                    width: 50px;
-                    z-index: 2;
-                }
+    .indentity {
+        flex-basis: 50%;
+        
+        .indentity-title {
+            h5 {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
             }
-
-            .scope-row-text {
-                width: 50%;
-
-                h5 {
-                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize + .2em);
-                    font-weight: bolder;                
-                }
-                p {
-                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
-                    text-transform: none;
-                }
+            h3 {
+                @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
             }
         }
-        .left-column {
-            justify-content: flex-start;
-            text-align: left;
-        }
 
-        .right-column {
-            justify-content: flex-end;
-            text-align: right;
-            margin-top: 10px;
-        }
-
-        .scope-line {
-            @include flexCenter(0px, 0px);
-            div {
-                padding: 0;
-                height: 40px;
-
-                .corner {
-                    width: 100%;
-                    position: relative;
-                    height: 50px;
-                }
-
-                .bottom-left {
-                    border-bottom: 3px solid v.$firstPrimaryColor;
-                    border-left: 3px solid v.$firstPrimaryColor;
-                    left: 10%;
-                    top: -60%;
-                    border-radius: 0px 0px 0px 15px;
-                }
-
-                .top-right {
-                    border-top: 3px solid v.$firstPrimaryColor;
-                    border-right: 3px solid v.$firstPrimaryColor;
-                    right: 11%;
-                    top: 57%;
-                    border-radius: 0px 15px 0px 0px;
-                }
-
-                .top-left {
-                    border-top: 3px solid v.$firstPrimaryColor;
-                    border-left: 3px solid v.$firstPrimaryColor;
-                    left: 10%;
-                    top: 37%;
-                    border-radius: 15px 0px 0px 0px;
-                }
-
-                .bottom-right {
-                    border-bottom: 3px solid v.$firstPrimaryColor;
-                    border-right: 3px solid v.$firstPrimaryColor;
-                    right: 11%;
-                    top: -32px;
-                    border-radius: 0px 0px 15px 0px;
-                }
+        .indentity-description {
+            width: 80%;
+            margin-top: 50px;
+            h4 {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize + .2em);
+                font-weight: bolder;                
             }
-
-            .scope-line-col {
-                width: 30%;
-            }
-
-            .scope-line-1 {
-                width: 100%;
-                hr {
-                    border-top: 3px solid v.$firstPrimaryColor;
-                    //margin: 0;
-                    top: 7px;
-                    position: relative;
-                    opacity: 1;
-                }
-            }
-
-            .scope-line-2 {
-                width: 100%;
-                hr {
-                    border-top: 3px solid v.$firstPrimaryColor;
-                    //margin: 0;
-                    top: -1px;
-                    position: relative;
-                    opacity: 1;
-                }
+            p {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                text-transform: none;
+                margin-top: 20px;
             }
         }
     }
