@@ -86,7 +86,7 @@ footer {
             color: v.$firstPrimaryColor;
 
             h5 {
-                @include textCase(null, v.$h5FontSize);
+                @include textCase(null, v.$h5FontSize + .3em);
                 text-transform: none;
                 font-weight: bold
             }
@@ -131,6 +131,13 @@ footer {
                 flex-shrink: 1;
                 flex-grow: 1;
                 flex-basis: 150px;
+
+                ul {
+                    padding-left: 0px;
+                    li {
+                        @include lozengeBullets;
+                    }
+                }
             }
 
             .footer-contact {

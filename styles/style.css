@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header-social {
   display: flex;
   align-items: center;
@@ -968,7 +969,7 @@ footer .footer-container .footer-content {
 }
 footer .footer-container .footer-content h5 {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 1.3em;
   text-transform: none;
   font-weight: bold;
 }
@@ -1012,6 +1013,18 @@ footer .footer-container .footer-content .footer-services, footer .footer-contai
   flex-shrink: 1;
   flex-grow: 1;
   flex-basis: 150px;
+}
+footer .footer-container .footer-content .footer-services ul, footer .footer-container .footer-content .footer-info ul {
+  padding-left: 0px;
+}
+footer .footer-container .footer-content .footer-services ul li, footer .footer-container .footer-content .footer-info ul li {
+  list-style-type: none;
+}
+footer .footer-container .footer-content .footer-services ul li::before, footer .footer-container .footer-content .footer-info ul li::before {
+  content: "◆"; /* Lozenge symbol */
+  color: #0C2359; /* Change color if needed */
+  float: left;
+  margin-right: 8px;
 }
 footer .footer-container .footer-content .footer-contact {
   display: flex;

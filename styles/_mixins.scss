@@ -234,3 +234,20 @@
         transition: v.$transition;
     }
 }
+
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+
+@mixin lozengeBullets {
+    list-style-type: none;
+
+    &::before {
+        content: "◆";  /* Lozenge symbol */
+        color: v.$firstPrimaryColor;   /* Change color if needed */
+        float: left;
+        //font-size: 1.2em;
+        //display: inline-block;
+        //width: 1em; /* Space between symbol and text */
+        margin-right: 8px;
+    }
+}
