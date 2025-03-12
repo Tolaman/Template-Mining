@@ -119,8 +119,10 @@
     padding: v.$paddingBoxHeight + 20px v.$paddingMainWidth;
     @include flexCenter(null, null);
     align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     .scope {
+        height: 100%;
         flex-basis: 50%;
         .scope-title{
             h5{
@@ -146,11 +148,21 @@
                         height: 50px;
                         width: 50px;
                         z-index: 2;
+
+                        /* &::after {
+                            content: " ";
+                            border-left: 3px solid v.$firstPrimaryColor;
+                            top: 30px;
+                            right: 4px;
+                            position: relative;
+                            z-index: 2;
+                            height: 100px;
+                        } */
                     }
                 }
 
                 .scope-row-text {
-                    width: 80%;
+                    //width: 80%;
 
                     h5 {
                         @include textCase(v.$firstPrimaryColor, v.$h5FontSize + .2em);
@@ -188,7 +200,7 @@
                     .bottom-left {
                         border-bottom: 3px solid v.$firstPrimaryColor;
                         border-left: 3px solid v.$firstPrimaryColor;
-                        left: 10%;
+                        left: 20%;
                         top: -60%;
                         border-radius: 0px 0px 0px 15px;
                     }
@@ -196,7 +208,7 @@
                     .top-right {
                         border-top: 3px solid v.$firstPrimaryColor;
                         border-right: 3px solid v.$firstPrimaryColor;
-                        right: 11%;
+                        right: 20%;
                         top: 57%;
                         border-radius: 0px 15px 0px 0px;
                     }
@@ -204,7 +216,7 @@
                     .top-left {
                         border-top: 3px solid v.$firstPrimaryColor;
                         border-left: 3px solid v.$firstPrimaryColor;
-                        left: 10%;
+                        left: 20%;
                         top: 37%;
                         border-radius: 15px 0px 0px 0px;
                     }
@@ -212,7 +224,7 @@
                     .bottom-right {
                         border-bottom: 3px solid v.$firstPrimaryColor;
                         border-right: 3px solid v.$firstPrimaryColor;
-                        right: 11%;
+                        right: 20%;
                         top: -32px;
                         border-radius: 0px 0px 15px 0px;
                     }
@@ -249,7 +261,8 @@
 
     .indentity {
         flex-basis: 50%;
-        
+        max-width: 700px;
+
         .indentity-title {
             h5 {
                 @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
@@ -258,18 +271,26 @@
                 @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
             }
         }
-
+        
         .indentity-description {
-            width: 80%;
-            margin-top: 50px;
-            h4 {
-                @include textCase(v.$firstPrimaryColor, v.$h5FontSize + .2em);
-                font-weight: bolder;                
+            div {
+                width: 90%;
+                margin-top: 50px;
+                border-bottom: 1px solid v.$firstPrimaryColor;
+                h4 {
+                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize + .2em);
+                    font-weight: bolder;                
+                }
+                p {
+                    @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                    text-transform: none;
+                    margin-top: 20px;
+                    margin-bottom: 40px;
+                }
             }
-            p {
-                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
-                text-transform: none;
-                margin-top: 20px;
+
+            .indentity-2 {
+                margin-top: 200px;
             }
         }
     }
