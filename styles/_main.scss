@@ -536,26 +536,47 @@
     }
 
     .project-container {
-        @include flexCenter(null, null);
+        @include flexCenter(v.$paddingBoxHeight, 0px);
         align-content: space-between;
         flex-wrap: wrap;
-        gap: 40px;
-        border: 1px solid black;
+        gap: 30px;
 
         article {
-            flex-basis: 450px;
-            height: 500px;
-            flex-grow: 1;
-            border: 1px solid black;
+            flex-basis: 470px;
             
             .article-img {
-                height: 60%;
+                height: 300px;
                 img {
                     object-fit: cover;
                     width: 100%;
                     height: 100%;
                 }
+                button {
+                    left: 80%;
+                    bottom: 8%;
+                    position: relative;
+                    @include squareButton;
+                }
             }
+            .article-date {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                margin: 0px 0px 20px 0px;
+            }
+
+            h4 {
+                //@include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
+                @include sectionTitle(v.$firstPrimaryColor, v.$h5FontSize + .6em);
+            }
+            p {
+                @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+                text-transform: none;
+            }
+        }
+
+        article:nth-of-type(3) {
+            justify-self: flex-start;
+            align-self: flex-start;
+            margin-left: 0px;
         }
     }
 }
