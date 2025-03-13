@@ -521,3 +521,41 @@
         }
     }
 }
+
+.project {
+    padding: v.$paddingMainWidth;
+
+    .project-title {
+        text-align: center;
+        h5 {
+            @include textCase(v.$firstPrimaryColor, v.$h5FontSize);
+        }
+        h3 {
+            @include sectionTitle(v.$firstPrimaryColor, v.$sectionTitleSize);
+        }
+    }
+
+    .project-container {
+        @include flexCenter(null, null);
+        align-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        border: 1px solid black;
+
+        article {
+            flex-basis: 450px;
+            height: 500px;
+            flex-grow: 1;
+            border: 1px solid black;
+            
+            .article-img {
+                height: 60%;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
