@@ -879,7 +879,7 @@ a button for to access the detail of the project*/
 .project .project-container article .article-img {
   height: 300px;
 }
-.project .project-container article .article-img img {
+.project .project-container article .article-img a, .project .project-container article .article-img img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -922,11 +922,6 @@ a button for to access the detail of the project*/
   color: #0C2359;
   font-size: 1em;
   text-transform: none;
-}
-.project .project-container article:nth-of-type(3) {
-  justify-self: flex-start;
-  align-self: flex-start;
-  margin-left: 0px;
 }
 
 .footer-newsletter {
